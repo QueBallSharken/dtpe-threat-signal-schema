@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/dtpe-threat-signal-schema/ThreatSignal.schema.json",
+  "title": "ThreatSignal",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["signal_type", "confidence", "evidence", "source", "timestamp"],
+  "properties": {
+    "signal_type": {
+      "type": "string",
+      "enum": ["phishing", "scam", "spam", "impersonation", "bot", "malware", "other"]
+    },
+    "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+    "evidence": { "type": "array", "items": { "type": "string" }, "minItems": 0 },
+    "source": { "type": "string", "enum": ["user", "community", "system", "research"] },
+    "timestamp": { "type": "integer", "minimum": 0 },
+    "metadata": { "type": "object", "additionalProperties": true }
+  }
+}
