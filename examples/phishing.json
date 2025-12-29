@@ -1,0 +1,11 @@
+{
+  "signal_type": "phishing",
+  "confidence": 0.87,
+  "evidence": ["suspicious domain", "credential harvest pattern"],
+  "source": "community",
+  "timestamp": 1730000000,
+  "metadata": {
+    "platform": "web",
+    "locale": "en-US"
+  }
+}
